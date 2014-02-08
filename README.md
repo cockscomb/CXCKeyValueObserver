@@ -69,6 +69,14 @@ For example, an implementation using KVO in some ViewController.
 
 That's all. It is easy to use with declaratory interface. CXCKeyValueObserver will call its block when observed key path value is changed, and it's automatically removed as observer when deallocated.
 
+## Install
+
+Use CocoaPods,
+
+```ruby
+pod 'CXCKeyValueObserver', :git => 'https://github.com/cockscomb/CXCKeyValueObserver.git'
+```
+
 ## License
 
 MIT.
