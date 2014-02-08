@@ -13,6 +13,7 @@
 		093E646718A5EE060080CE80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 093E646518A5EE060080CE80 /* InfoPlist.strings */; };
 		093E646918A5EE060080CE80 /* CXCKeyValueObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E646818A5EE060080CE80 /* CXCKeyValueObserverTests.m */; };
 		093E647118A5EF1F0080CE80 /* CXCKeyValueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E647018A5EF1F0080CE80 /* CXCKeyValueObserver.m */; };
+		C3B086A245D04303B96C433A /* libPods-CXCKeyValueObserverTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28AB95DCA9B8425BA52B2E15 /* libPods-CXCKeyValueObserverTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		093E646A18A5EE060080CE80 /* CXCKeyValueObserverTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CXCKeyValueObserverTests-Prefix.pch"; sourceTree = "<group>"; };
 		093E646F18A5EF1F0080CE80 /* CXCKeyValueObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXCKeyValueObserver.h; sourceTree = "<group>"; };
 		093E647018A5EF1F0080CE80 /* CXCKeyValueObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXCKeyValueObserver.m; sourceTree = "<group>"; };
+		28AB95DCA9B8425BA52B2E15 /* libPods-CXCKeyValueObserverTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CXCKeyValueObserverTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF08E20DAEA042E9A7921DBC /* Pods-CXCKeyValueObserverTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXCKeyValueObserverTests.xcconfig"; path = "Pods/Pods-CXCKeyValueObserverTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +39,7 @@
 				093E645D18A5EE060080CE80 /* XCTest.framework in Frameworks */,
 				093E646118A5EE060080CE80 /* UIKit.framework in Frameworks */,
 				093E645F18A5EE060080CE80 /* Foundation.framework in Frameworks */,
+				C3B086A245D04303B96C433A /* libPods-CXCKeyValueObserverTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +53,7 @@
 				093E646218A5EE060080CE80 /* CXCKeyValueObserverTests */,
 				093E645B18A5EE060080CE80 /* Frameworks */,
 				093E645A18A5EE060080CE80 /* Products */,
+				EF08E20DAEA042E9A7921DBC /* Pods-CXCKeyValueObserverTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +71,7 @@
 				093E645C18A5EE060080CE80 /* XCTest.framework */,
 				093E645E18A5EE060080CE80 /* Foundation.framework */,
 				093E646018A5EE060080CE80 /* UIKit.framework */,
+				28AB95DCA9B8425BA52B2E15 /* libPods-CXCKeyValueObserverTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -105,9 +111,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 093E646B18A5EE060080CE80 /* Build configuration list for PBXNativeTarget "CXCKeyValueObserverTests" */;
 			buildPhases = (
+				3E968EC124D24BEFB5F6B36C /* Check Pods Manifest.lock */,
 				093E645518A5EE060080CE80 /* Sources */,
 				093E645618A5EE060080CE80 /* Frameworks */,
 				093E645718A5EE060080CE80 /* Resources */,
+				CCDACC9669A54189999FD77A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +144,8 @@
 			mainGroup = 093E644E18A5ED970080CE80;
 			productRefGroup = 093E645A18A5EE060080CE80 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				093E645818A5EE060080CE80 /* CXCKeyValueObserverTests */,
@@ -153,6 +163,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E968EC124D24BEFB5F6B36C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CCDACC9669A54189999FD77A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-CXCKeyValueObserverTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		093E645518A5EE060080CE80 /* Sources */ = {
@@ -192,6 +235,7 @@
 		};
 		093E646C18A5EE060080CE80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF08E20DAEA042E9A7921DBC /* Pods-CXCKeyValueObserverTests.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
@@ -240,6 +284,7 @@
 		};
 		093E646D18A5EE060080CE80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF08E20DAEA042E9A7921DBC /* Pods-CXCKeyValueObserverTests.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";

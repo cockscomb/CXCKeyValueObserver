@@ -2,6 +2,8 @@
 # platform :ios, "6.0"
 
 target "CXCKeyValueObserverTests" do
-
+  pod 'Specta'
+  pod 'Expecta'
+  pod 'OCMock'
 end
 
