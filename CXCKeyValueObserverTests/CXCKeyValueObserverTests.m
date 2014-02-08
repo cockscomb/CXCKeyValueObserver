@@ -44,8 +44,7 @@ describe(@"KeyValueObserver", ^{
         id mock = [OCMockObject niceMockForClass:[CXCKeyValueObserverTestsObject class]];
         [[mock expect] addObserver:[OCMArg any] forKeyPath:keyPath options:0 context:[OCMArg anyPointer]];
 
-        __attribute__((unused))
-        CXCKeyValueObserver *observer = [[CXCKeyValueObserver alloc]
+        __unused CXCKeyValueObserver *observer = [[CXCKeyValueObserver alloc]
                 initWithObservee:mock
                       forKeyPath:keyPath
                          options:0
@@ -72,8 +71,7 @@ describe(@"KeyValueObserver", ^{
     });
 
     it(@"should call its block when the observing property changed", ^{
-        __attribute__((unused))
-        CXCKeyValueObserver *observer = [[CXCKeyValueObserver alloc]
+        __unused CXCKeyValueObserver *observer = [[CXCKeyValueObserver alloc]
                 initWithObservee:observee
                       forKeyPath:keyPath
                          options:0
