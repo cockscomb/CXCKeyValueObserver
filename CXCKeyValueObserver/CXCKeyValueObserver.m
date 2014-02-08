@@ -49,7 +49,7 @@ static void * Context = &Context;
     NSMutableString *description = [NSMutableString stringWithFormat:@"<%@: ", NSStringFromClass([self class])];
     [description appendFormat:@"self.observee=%@", self.observee];
     [description appendFormat:@", self.keyPath=%@", self.keyPath];
-    [description appendFormat:@", self.options=%d", self.options];
+    [description appendFormat:@", self.options=%lu", (unsigned long)self.options];
     [description appendFormat:@", self.block=%p", self.block];
     [description appendString:@">"];
     return description;
