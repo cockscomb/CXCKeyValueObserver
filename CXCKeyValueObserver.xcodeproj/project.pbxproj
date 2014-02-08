@@ -12,6 +12,7 @@
 		093E646118A5EE060080CE80 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093E646018A5EE060080CE80 /* UIKit.framework */; };
 		093E646718A5EE060080CE80 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 093E646518A5EE060080CE80 /* InfoPlist.strings */; };
 		093E646918A5EE060080CE80 /* CXCKeyValueObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E646818A5EE060080CE80 /* CXCKeyValueObserverTests.m */; };
+		093E647118A5EF1F0080CE80 /* CXCKeyValueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 093E647018A5EF1F0080CE80 /* CXCKeyValueObserver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		093E646618A5EE060080CE80 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		093E646818A5EE060080CE80 /* CXCKeyValueObserverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXCKeyValueObserverTests.m; sourceTree = "<group>"; };
 		093E646A18A5EE060080CE80 /* CXCKeyValueObserverTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CXCKeyValueObserverTests-Prefix.pch"; sourceTree = "<group>"; };
+		093E646F18A5EF1F0080CE80 /* CXCKeyValueObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXCKeyValueObserver.h; sourceTree = "<group>"; };
+		093E647018A5EF1F0080CE80 /* CXCKeyValueObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXCKeyValueObserver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 		093E644E18A5ED970080CE80 = {
 			isa = PBXGroup;
 			children = (
+				093E646E18A5EEF80080CE80 /* CXCKeyValueObserver */,
 				093E646218A5EE060080CE80 /* CXCKeyValueObserverTests */,
 				093E645B18A5EE060080CE80 /* Frameworks */,
 				093E645A18A5EE060080CE80 /* Products */,
@@ -83,6 +87,15 @@
 				093E646A18A5EE060080CE80 /* CXCKeyValueObserverTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		093E646E18A5EEF80080CE80 /* CXCKeyValueObserver */ = {
+			isa = PBXGroup;
+			children = (
+				093E646F18A5EF1F0080CE80 /* CXCKeyValueObserver.h */,
+				093E647018A5EF1F0080CE80 /* CXCKeyValueObserver.m */,
+			);
+			path = CXCKeyValueObserver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093E647118A5EF1F0080CE80 /* CXCKeyValueObserver.m in Sources */,
 				093E646918A5EE060080CE80 /* CXCKeyValueObserverTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
