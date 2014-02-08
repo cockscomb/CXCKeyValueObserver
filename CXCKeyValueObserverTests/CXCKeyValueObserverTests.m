@@ -83,6 +83,32 @@ describe(@"KeyValueObserver", ^{
         expect(gotKeyPath).to.beIdenticalTo(keyPath);
         expect(gotChange).notTo.beNil();
     });
+    
+    it(@"should raise exception when passed invalid parameters", ^{
+        expect(^{
+            __unused CXCKeyValueObserver *observer = [[CXCKeyValueObserver alloc]
+                                                      initWithObservee:nil
+                                                      forKeyPath:keyPath
+                                                      options:0
+                                                      block:block];
+        }).to.raiseAny();
+
+        expect(^{
+            __unused CXCKeyValueObserver *observer = [[CXCKeyValueObserver alloc]
+                                                      initWithObservee:observee
+                                                      forKeyPath:nil
+                                                      options:0
+                                                      block:block];
+        }).to.raiseAny();
+
+        expect(^{
+            __unused CXCKeyValueObserver *observer = [[CXCKeyValueObserver alloc]
+                                                      initWithObservee:observee
+                                                      forKeyPath:keyPath
+                                                      options:0
+                                                      block:nil];
+        }).to.raiseAny();
+    });
 });
 
 SpecEnd

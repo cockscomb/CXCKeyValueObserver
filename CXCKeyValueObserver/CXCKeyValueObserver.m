@@ -15,6 +15,10 @@ static void * Context = &Context;
 
 - (instancetype)initWithObservee:(id)observee forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(CXCKeyValueObservingBlock)block
 {
+    NSParameterAssert(observee);
+    NSParameterAssert(keyPath);
+    NSParameterAssert(block);
+    
     self = [super init];
     if (self) {
         self.observee = observee;
