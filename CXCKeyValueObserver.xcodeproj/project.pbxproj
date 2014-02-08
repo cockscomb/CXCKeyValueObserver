@@ -144,8 +144,6 @@
 			mainGroup = 093E644E18A5ED970080CE80;
 			productRefGroup = 093E645A18A5EE060080CE80 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				093E645818A5EE060080CE80 /* CXCKeyValueObserverTests */,
@@ -344,6 +342,7 @@
 				093E646D18A5EE060080CE80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
