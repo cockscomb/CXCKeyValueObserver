@@ -10,6 +10,7 @@
 
 #import "Specta.h"
 #import "Expecta.h"
+#import "OCMock.h"
 
 #import "CXCKeyValueObserver.h"
 
@@ -47,7 +48,39 @@ describe(@"KeyValueObserver", ^{
         keyPath = NSStringFromSelector(@selector(exampleProperty));
     });
 
+    it(@"should call addObserver:forKayPath:options:context: when initialized", ^{
+        id mock = [OCMockObject niceMockForClass:[CXCKeyValueObserverTestsObject class]];
+        [[mock expect] addObserver:[OCMArg any] forKeyPath:keyPath options:0 context:[OCMArg anyPointer]];
+
+        __attribute__((unused))
+        CXCKeyValueObserver *observer = [[CXCKeyValueObserver alloc]
+                initWithObservee:mock
+                      forKeyPath:keyPath
+                         options:0
+                           block:block];
+
+        [mock verify];
+    });
+
+    it(@"should call removeObserver:forKayPath:context: when deallocated", ^{
+        id mock = [OCMockObject niceMockForClass:[CXCKeyValueObserverTestsObject class]];
+        [[mock expect] removeObserver:[OCMArg any] forKeyPath:keyPath context:[OCMArg anyPointer]];
+
+        @autoreleasepool {
+            CXCKeyValueObserver *observer = [[CXCKeyValueObserver alloc]
+                    initWithObservee:mock
+                          forKeyPath:keyPath
+                             options:0
+                               block:block];
+
+            observer = nil;
+        }
+
+        [mock verify];
+    });
+
     it(@"should call its block when the observing property changed", ^{
+        __attribute__((unused))
         CXCKeyValueObserver *observer = [[CXCKeyValueObserver alloc]
                 initWithObservee:observee
                       forKeyPath:keyPath
